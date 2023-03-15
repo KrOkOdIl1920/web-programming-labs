@@ -25,3 +25,19 @@ a {
     font-style: italic; 
     text-decoration: none;
 }
+
+a:visited {
+    color: blue;
+}
+
+a:hover {
+    color: red;
+    text-decoration: underline;
+    background-color: white;
+    font-weight: bold;
+}
+
+a:active {
+    color: pink;
+    background-color: blanchedalmond;
+}
