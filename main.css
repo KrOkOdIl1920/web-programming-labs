@@ -5,14 +5,14 @@ body {background-color: lightblue;
 }
 
 header {
-    background-color: black;
+    background: linear-gradient(to right, red, orange, yellow, green, lightblue, blue, purple);
     color: lightgreen; 
     padding: 15px; 
     font-size: 12pt;
 }
 
 footer {
-    background-color: black; 
+    background: linear-gradient(to right, red, orange, yellow, green, lightblue, blue, purple);
     color: lightgreen; 
     padding: 15px; 
     font-size: 12pt; 
