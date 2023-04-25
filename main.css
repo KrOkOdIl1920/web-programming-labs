@@ -37,6 +37,10 @@ footer {
     font-style: italic; 
     text-align: right;
     text-shadow: 10px 6px 3px gray;
+    position: fixed;
+    width: 100%;
+    bottom: 0%;
+    padding: 10px 0px 10px 0px;
 }
 
 footer:hover {
