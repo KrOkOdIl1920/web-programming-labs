@@ -6,9 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Донельчук Артём Вячеславович. Лабораторная работа 4</title>
     <link rel="stylesheet" href="main.css">
+    <script>
+        function ShowSum() {
+            let a = 5154;
+            let b = 7891;
+            let result = a + b;
+            alert("Сумма " + a + " и " + b + " равна " + result);
+        }
+    </script>
     <style>
         .message {
-            left: 100pt
+            height: 23px;
+            width: 213px;
+            background: chocolate;
+            border: 2px solid orange;
+            border-radius: 10px;
+            display: inline-block;
+            text-align: center;
+            cursor: pointer;
         }
     </style>
 </head>
@@ -19,7 +34,7 @@
     </header>
 
     <main>
-        <div class="message">Сколько будет 5154+7891</div>
+        <div class="message" onclick="ShowSum()">Сколько будет 5154+7891</div>
         <div class="message">Узнать, кто автор страницы</div>
     </main>
 
