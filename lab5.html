@@ -59,6 +59,27 @@
             output.style.color = textColor;
             output.style.borderColor = bordCol;
         }
+
+        function Products() {
+            let apple  = document.getElementById('apple');
+            let pear = document.getElementById('pear');
+            let orange = document.getElementById('orange');
+            let melon = document.getElementById('melon');
+
+            let a = parseInt(apple.value);
+            let b = parseInt(pear.value);
+            let c = parseInt(orange.value);
+            let d = parseInt(melon.value);
+
+            let totalApple = a *100
+            let totalPear = b *80
+            let totalOrange = c *150
+            let totalMelon = d *300
+
+            let totalResult = totalApple + totalPear + totalOrange + totalMelon;
+            let output = document.getElementById("prepare")
+            output.innerHTML = "Общая цена: " + totalResult + " р"
+         }
     </script>
 
     <style>
@@ -78,6 +99,14 @@
             width: 300px;
             height: 40px;
         }
+
+        #block_last {
+            border: 3px solid;
+            width: 300px;
+            height: 350px;
+            margin: 40px;
+            padding: 20px;
+         }
     </style>
 </head>
 
@@ -118,6 +147,34 @@
         </div>
 
         <div id="output"></div>
+
+        <div id="block_last">
+            <h1>Корзина товаров</h1><br>
+
+            Яблоки(100р/шт:)<br>
+
+            <label><input type="number" value="0" id="apple"></label><br>
+
+            Груши(80р/шт:)<br>
+
+            <label><input type="number" value="0" id="pear"></label><br>
+
+            Апельсины(150/шт:)<br>
+
+            <label><input type="number" value="0" id="orange"></label><br>
+
+            Дыни(300р/шт:)<br>
+
+            <label><input type="number" value="0" id="melon"></label><br>
+
+            <h3>
+                <input type="button" value="Рассчитать" onclick="Products()"><br>
+            </h3>
+
+            <div id = prepare>
+                Общая цена: 0 р
+            </div>
+        </div>
     </main>
 
     <footer onclick="ShowAuthor()">
