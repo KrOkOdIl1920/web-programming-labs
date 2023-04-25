@@ -80,6 +80,11 @@
             let output = document.getElementById("prepare")
             output.innerHTML = "Общая цена: " + totalResult + " р"
          }
+
+         function Balls(Num) {
+            let remove = document.getElementById(Num)
+            remove.style.opacity = "0";
+         }
     </script>
 
     <style>
@@ -94,6 +99,155 @@
             cursor: pointer;
         }
 
+        .first {
+             position:absolute;
+             border: 1px solid gray;
+             border-radius: 50%;
+             background-color: green;
+             width: 50px;
+             height: 50px;
+             left: 400px;
+             top: 300px;
+             text-align: center;
+             line-height: 50px;
+             font-size: 20px;
+             font-weight: bold;
+         }
+
+         .second {
+             position:absolute;
+             border: 1px solid gray;
+             border-radius: 50%;
+             background-color: white;
+             width: 50px;
+             height: 50px;
+             left: 460px;
+             top: 300px;
+             text-align: center;
+             line-height: 50px;
+             font-size: 20px;
+             font-weight: bold;
+         }
+         .third {
+             position:absolute;
+             border: 1px solid gray;
+             border-radius: 50%;
+             background-color: black;
+             width: 50px;
+             height: 50px;
+             left: 520px;
+             top: 300px;
+             text-align: center;
+             line-height: 50px;
+             font-size: 20px;
+             font-weight: bold;
+         }
+
+         .fourth {
+             position:absolute;
+             border: 1px solid gray;
+             border-radius: 50%;
+             background-color: yellow;
+             width: 50px;
+             height: 50px;
+             left: 580px;
+             top: 300px;
+             text-align: center;
+             line-height: 50px;
+             font-size: 20px;
+             font-weight: bold;
+         }
+
+         .fifth {
+             position:absolute;
+             border: 1px solid gray;
+             border-radius: 50%;
+             background-color: burlywood;
+             width: 50px;
+             height: 50px;
+             left: 640px;
+             top: 300px;
+             text-align: center;
+             line-height: 50px;
+             font-size: 20px;
+             font-weight: bold;
+         }
+
+         .sixth {
+             position:absolute;
+             border: 1px solid gray;
+             border-radius: 50%;
+             background-color: pink;
+             width: 50px;
+             height: 50px;
+             left: 700px;
+             top: 300px;
+             text-align: center;
+             line-height: 50px;
+             font-size: 20px;
+             font-weight: bold;
+         }
+
+         .seventh {
+             position:absolute;
+             border: 1px solid gray;
+             border-radius: 50%;
+             background-color: purple;
+             width: 50px;
+             height: 50px;
+             left: 760px;
+             top: 300px;
+             text-align: center;
+             line-height: 50px;
+             font-size: 20px;
+             font-weight: bold;
+         }
+
+         .eighth {
+             position:absolute;
+             border: 1px solid gray;
+             border-radius: 50%;
+             background-color: brown;
+             width: 50px;
+             height: 50px;
+             left: 820px;
+             top: 300px;
+             text-align: center;
+             line-height: 50px;
+             font-size: 20px;
+             font-weight: bold;
+         }
+
+         .ninth {
+             position:absolute;
+             border: 1px solid gray;
+             border-radius: 50%;
+             background-color: red;
+             width: 50px;
+             height: 50px;
+             left: 880px;
+             top: 300px;
+             text-align: center;
+             line-height: 50px;
+             font-size: 20px;
+             font-weight: bold;
+         }
+
+         .tenth {
+             position:absolute;
+             border: 1px solid gray;
+             border-radius: 50%;
+             background-color: aquamarine;
+             width: 50px;
+             height: 50px;
+             left: 940px;
+             top: 300px;
+             text-align: center;
+             line-height: 50px;
+             font-size: 20px;
+             font-weight: bold;
+         }
+
         #output {
             border: 1px solid;
             width: 300px;
@@ -104,7 +258,7 @@
             border: 3px solid;
             width: 300px;
             height: 350px;
-            margin: 40px;
+            margin: 30px;
             padding: 20px;
          }
     </style>
@@ -175,6 +329,26 @@
                 Общая цена: 0 р
             </div>
         </div>
+
+        <div class="first" id = "1" onclick="Balls('1')">1</div>
+
+        <div class="second" id = "2" onclick="Balls('2')">2</div>
+
+        <div class="third" id = "3" onclick="Balls('3')">3</div>
+
+        <div class="fourth" id = "4" onclick="Balls('4')">4</div>
+
+        <div class="fifth" id = "5" onclick="Balls('5')">5</div>
+
+        <div class="sixth" id = "6" onclick="Balls('6')">6</div>
+
+        <div class="seventh" id = "7" onclick="Balls('7')">7</div>
+
+        <div class="eighth" id = "8" onclick="Balls('8')">8</div>
+
+        <div class="ninth" id = "9" onclick="Balls('9')">9</div>
+
+        <div class="tenth" id = "10" onclick="Balls('10')">10</div>
     </main>
 
     <footer onclick="ShowAuthor()">
