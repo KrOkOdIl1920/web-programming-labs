@@ -51,7 +51,16 @@
             let author = "Добро пожаловать!\nАвтор страницы:\nДонельчук Артём Вячеславович"
             alert(author)
         }
+
+        function ChangeOutput(buttonNUM, backColor, textColor, bordCol) {
+            let output = document.getElementById("output");
+            output.innerHTML = "Нажата кнопка " + buttonNUM;
+            output.style.backgroundColor = backColor;
+            output.style.color = textColor;
+            output.style.borderColor = bordCol;
+        }
     </script>
+
     <style>
         .message {
             height: 23px;
@@ -62,6 +71,12 @@
             display: inline-block;
             text-align: center;
             cursor: pointer;
+        }
+
+        #output {
+            border: 1px solid;
+            width: 300px;
+            height: 40px;
         }
     </style>
 </head>
@@ -94,6 +109,15 @@
         <div class="message" onclick="ShowAuthor()">
             Узнать, кто автор страницы
         </div>
+
+        <div>
+            <input type="button" value="Кнопка 1" onclick="ChangeOutput(1, 'red', 'yellow', 'black')">
+            <input type="button" value="Кнопка 2" onclick="ChangeOutput(2, 'black', 'lime', 'yellow')">
+            <input type="button" value="Кнопка 3" onclick="ChangeOutput(3, 'white', 'blue', 'red')">
+            <input type="button" value="Кнопка 4" onclick="ChangeOutput(4, 'green', 'orange', 'white')">
+        </div>
+
+        <div id="output"></div>
     </main>
 
     <footer onclick="ShowAuthor()">
