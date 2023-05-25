@@ -27,6 +27,16 @@
             padding: 10px;
             background-color: wheat;
         }
+
+        .color {
+            border: 1px solid gray;
+            height: auto;
+            width: 250px;
+            margin: 20px auto;
+            text-align: center;
+            padding: 20px;
+            background-color: yellow;
+        }
     </style>
 
     <script>
@@ -85,6 +95,34 @@
             let screens = document.getElementsByClassName("rules");
             screens[0].style.display = "block";
             screens[1].style.display = "none";
+        }
+
+        function ChangeColor(div) {
+            if (div.style.backgroundColor == "yellow") {
+                div.style.backgroundColor = "red"
+                div.style.color = "black"
+                document.getElementById("color_name").innerHTML = "Красный"
+            }
+            else if (div.style.backgroundColor == "red") {
+                div.style.backgroundColor = "black"
+                div.style.color = "white"
+                document.getElementById("color_name").innerHTML = "Чёрный"
+            }
+            else if (div.style.backgroundColor == "black") {
+                div.style.backgroundColor = "blue"
+                div.style.color = "yellow"
+                document.getElementById("color_name").innerHTML = "Синий"
+            }
+            else if (div.style.backgroundColor == "blue") {
+                div.style.backgroundColor = "green"
+                div.style.color = "blue"
+                document.getElementById("color_name").innerHTML = "Зелёный"
+            }
+            else {
+                div.style.backgroundColor = "yellow"
+                div.style.color = "maroon"
+                document.getElementById("color_name").innerHTML = "Жёлтый"
+            }
         }
     </script>
 </head>
@@ -150,6 +188,11 @@
                 <li>Если вы не угадали число, то появится подсказка.</li>
                 <li>Когда вы окончили головоломку, вы можете нажать кнопку "сыграть ещё раз" и повторить игру.</li>
             </ol>
+        </div>
+
+        <div class="color" ondblclick="ChangeColor(this)">
+            Цвет: <span id = color_name>Жёлтый</span><br>
+            Cделайте двойной щелчок, чтобы сменить.
         </div>
     </main>
 
