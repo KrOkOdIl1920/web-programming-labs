@@ -45,18 +45,23 @@
             let input = document.getElementById("user-number");
             let userNumber = parseInt(input.value);
             let message = document.getElementById("result");
-            if (userNumber > number) {
-                message.innerHTML = "Вы ввели слишком большое число";
-            }
-            else if (userNumber < number) {
-                message.innerHTML = "Вы ввели слишком маленькое число";
+            if (userNumber >0 & userNumber < 101) {
+                if (userNumber > number) {
+                    message.innerHTML = "Вы ввели слишком большое число";
+                }
+                else if (userNumber < number) {
+                    message.innerHTML = "Вы ввели слишком маленькое число";
+                }
+                else {
+                    let screens = document.getElementsByClassName("game");
+                    screens[1].style.display = "none";
+                    screens[2].style.display = "block";
+                    document.getElementById("number").innerHTML = number;
+                    document.getElementById("try-count").innerHTML = count;
+                }
             }
             else {
-                let screens = document.getElementsByClassName("game");
-                screens[1].style.display = "none";
-                screens[2].style.display = "block";
-                document.getElementById("number").innerHTML = number;
-                document.getElementById("try-count").innerHTML = count;
+                message.innerHTML = "Вы ввели некорректное значение, попробуйте снова."
             }
         }
 
@@ -143,7 +148,7 @@
                 <li>Перед вами появится текстовое поле, в которое нужно ввести число от 1 до 100, введите.</li>
                 <li>Если вы угадали число, то перед вами появится соответствующая надпись.</li>
                 <li>Если вы не угадали число, то появится подсказка.</li>
-                <li>Когда вы окончили головоломку, вы можете нажать кнопку играть снова и повторить игру.</li>
+                <li>Когда вы окончили головоломку, вы можете нажать кнопку "сыграть ещё раз" и повторить игру.</li>
             </ol>
         </div>
     </main>
