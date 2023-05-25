@@ -16,6 +16,17 @@
             text-align: center;
             padding: 10px;
         }
+
+        .rules {
+            border: 1px solid gray;
+            border-radius: 10px;
+            height: auto;
+            width: fit-content;
+            margin: 10px auto;
+            text-align: left;
+            padding: 10px;
+            background-color: wheat;
+        }
     </style>
 
     <script>
@@ -58,6 +69,18 @@
             screens[2].style.display = "none";
             screens[1].style.display = "block";
         }
+
+        function rules_show() {
+            let screens = document.getElementsByClassName("rules");
+            screens[0].style.display = "none";
+            screens[1].style.display = "block";
+        }
+
+        function rules_hide() {
+            let screens = document.getElementsByClassName("rules");
+            screens[0].style.display = "block";
+            screens[1].style.display = "none";
+        }
     </script>
 </head>
 
@@ -79,7 +102,9 @@
             <div>
                 Задумано число от 1 до 100. Угадайте,какое?<br>
                 <input type="number" value="" min="1" max="100" id="user-number"><br>
-                <button onclick="guess()">Угадать</button>
+                <button onclick="guess()">
+                    Угадать
+                </button>
                 <div id="result"></div>
             </div>
         </div>
@@ -96,8 +121,30 @@
             </div>
                 
             <div>
-                <button onclick="again()">Сыграть ещё раз</button>
+                <button onclick="again()">
+                    Сыграть ещё раз
+                </button>
             </div>
+        </div>
+
+        <div class="rules">
+            <button onclick="rules_show()">
+                Показать правила игры
+            </button>
+        </div>
+
+        <div class="rules" style="display: none;">
+            <button onclick="rules_hide()">
+                Скрыть правила игры
+            </button>
+
+            <ol type="I">
+                <li>Сначала нажмите кнопку играть в игру.</li>
+                <li>Перед вами появится текстовое поле, в которое нужно ввести число от 1 до 100, введите.</li>
+                <li>Если вы угадали число, то перед вами появится соответствующая надпись.</li>
+                <li>Если вы не угадали число, то появится подсказка.</li>
+                <li>Когда вы окончили головоломку, вы можете нажать кнопку играть снова и повторить игру.</li>
+            </ol>
         </div>
     </main>
 
