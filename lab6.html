@@ -32,16 +32,35 @@
             border: 1px solid gray;
             height: auto;
             width: 250px;
-            margin: 20px auto;
+            margin: 15px;
             text-align: center;
             padding: 20px;
             background-color: yellow;
+        }
+        
+        .move {
+            transform: rotate(0);
+            transition: 4s;
+            position: absolute;
+            top: 275px;
+            left: 0px;
+            border: 1px solid gray;
+            height: 150px;
+            width: 150px;
+            margin: 20px;
+            text-align: center;
+            line-height: 150px;
+            vertical-align: bottom;
+            padding: 20px;
+            background-color: burlywood;
+            cursor: pointer;
         }
     </style>
 
     <script>
         let number;
         let count = 0;
+        let count_click = 0;
         
         function startGame() {
             number = Math.floor( Math.random() * 100 ) + 1;
@@ -124,6 +143,20 @@
                 document.getElementById("color_name").innerHTML = "Жёлтый"
             }
         }
+
+        function move_kv (div) {
+            count_click++;
+            count_click_counter = count_click % 2
+            if (count_click_counter == 1) {
+                div.style.left = "1240px"
+                div.style.transform = "rotate(1turn)"
+            }
+            else {
+                div.style.left = "0px"
+                div.style.transform = "rotate(0)"
+                count_click = 0
+            }
+        }
     </script>
 </head>
 
@@ -193,6 +226,10 @@
         <div class="color" ondblclick="ChangeColor(this)">
             Цвет: <span id = color_name>Жёлтый</span><br>
             Cделайте двойной щелчок, чтобы сменить.
+        </div>
+
+        <div class="move" onclick="move_kv(this)">
+            Щёлкни меня
         </div>
     </main>
 
