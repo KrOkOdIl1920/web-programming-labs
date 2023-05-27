@@ -29,8 +29,11 @@
         }
 
         .color {
+            position: absolute;
+            top: 50px;
+            left: 0px;
             border: 1px solid gray;
-            height: auto;
+            height: 50px;
             width: 250px;
             margin: 15px;
             text-align: center;
@@ -42,7 +45,7 @@
             transform: rotate(0);
             transition: 4s;
             position: absolute;
-            top: 275px;
+            top: 175px;
             left: 0px;
             border: 1px solid gray;
             height: 150px;
@@ -50,10 +53,22 @@
             margin: 20px;
             text-align: center;
             line-height: 150px;
-            vertical-align: bottom;
             padding: 20px;
             background-color: burlywood;
             cursor: pointer;
+        }
+
+        .increase {
+            position: absolute;
+            top: 410px;
+            left: 0px;
+            height: 30px;
+            width: 100;
+            text-align: center;
+            line-height: 30px;
+            background-color: brown;
+            cursor: pointer;
+            color: white;
         }
     </style>
 
@@ -74,7 +89,7 @@
             let input = document.getElementById("user-number");
             let userNumber = parseInt(input.value);
             let message = document.getElementById("result");
-            if (userNumber >0 & userNumber < 101) {
+            if (userNumber >0 && userNumber < 101) {
                 if (userNumber > number) {
                     message.innerHTML = "Вы ввели слишком большое число";
                 }
@@ -157,6 +172,18 @@
                 count_click = 0
             }
         }
+
+        function increase_f (div) {
+            width = div.offsetWidth
+            if (width <= 953) {
+                width = width + 50 + "px"
+                div.style.width = width
+            }
+            else {
+                width = 103 + "px"
+                div.style.width = width
+            }
+        }
     </script>
 </head>
 
@@ -230,6 +257,10 @@
 
         <div class="move" onclick="move_kv(this)">
             Щёлкни меня
+        </div>
+
+        <div class="increase" onclick="increase_f(this)">
+            Увеличь меня
         </div>
     </main>
 
