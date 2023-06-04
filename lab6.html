@@ -70,6 +70,19 @@
             cursor: pointer;
             color: white;
         }
+
+        .fashion {
+            position: absolute;
+            top: 50px;
+            left: 1100px;
+            border: 1px solid gray;
+            height: 50px;
+            width: 250px;
+            margin: 15px;
+            text-align: center;
+            padding: 20px;
+            background-color: palegreen;
+        }
     </style>
 
     <script>
@@ -184,6 +197,40 @@
                 div.style.width = width
             }
         }
+
+        function filter() {
+            let color = document.getElementById('wear-color').value;
+            let type = document.getElementById('wear-type').value;
+            let wear = document.getElementById('wear');
+
+            if(color == "Красный" && type == "Футболка") {
+                wear.src = "red-f.jpg";
+            }
+            else if(color =="Белый" && type =="Футболка") {
+                wear.src = "white-f.jpeg"
+            }
+            else if(color =="Чёрный" && type =="Футболка") {
+                wear.src = "black-f.jpeg"
+            }
+            else if(color =="Красный" && type =="Поло") {
+                wear.src = "red-p.jpeg"
+            }
+            else if(color =="Белый" && type =="Поло") {
+                wear.src = "white-p.jpeg"
+            }
+            else if(color =="Чёрный" && type =="Поло") {
+                wear.src = "black-p.jpeg"
+            }
+            else if(color =="Красный" && type =="Майка") {
+                wear.src = "red-m.jpeg"
+            }
+            else if(color =="Белый" && type =="Майка") {
+                wear.src = "white-m.jpeg"
+            }
+            else {
+                wear.src = "black-m.jpeg"
+            }
+        }
     </script>
 </head>
 
@@ -261,6 +308,26 @@
 
         <div class="increase" onclick="increase_f(this)">
             Увеличь меня
+        </div>
+
+        <div class="fashion">
+            Цвет одежды:
+            <select id="wear-color">
+                <option>Красный</option>
+                <option>Белый</option>
+                <option>Чёрный</option>
+            </select><br>
+
+            Тип одежды:
+            <select id="wear-type">
+                <option>Футболка</option>
+                <option>Поло</option>
+                <option>Майка</option>
+            </select><br>
+
+            <button onclick="filter()">Ок</button><br>
+
+            <img id="wear">
         </div>
     </main>
 
