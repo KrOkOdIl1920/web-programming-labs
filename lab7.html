@@ -6,6 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Донельчук Артём Вячеславович. Лабораторная работа 7</title>
     <link rel="stylesheet" href="main.css">
+    <style>
+        .circle {
+            border: 1px solid gray;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            text-align: center;
+            line-height: 50px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .circle_div {
+            position: absolute;
+            top: 60px;
+            left: 300px;
+            border: 1px solid gray;
+            text-align: center;
+        }
+    </style>
     <script>
         function addBlocks() {
             let blocks = document.getElementById("blocks");
@@ -44,6 +63,23 @@
                 blocks.appendChild(block);
             }
         }
+
+        function Create_circles() {
+            let circle = document.getElementById("user-number").value;
+            let screen = document.getElementById("screen");
+            for (let i = circle; i > 0; i--) {
+                let circles = document.createElement("div");
+                circles.innerHTML = (i);
+                if ( i % 2 == 0) {
+                    circles.style.backgroundColor = "green"; 
+                }
+                else {
+                    circles.style.backgroundColor = "red";
+                }
+                circles.classList.add("circle");
+                screen.appendChild(circles);
+            }
+        }
     </script>
 </head>
 
@@ -62,6 +98,13 @@
 
         <button onclick="changeOpasity()">Создать полупрозрачные блоки</button>
         <div id="opasity_blocks"></div>
+
+        <div class="circle_div">
+            Введите количество кругов для создания:
+            <input type="number" value="5" min="1" id="user-number" placeholder="Введите число кругов"><br>
+            <button onclick="Create_circles()">Красное/зелёное</button>
+            <div id="screen" style="color: white;"></div>
+        </div>
     </main>
 
     <footer>
