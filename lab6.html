@@ -125,9 +125,9 @@
         function again() {
             let screens = document.getElementsByClassName("game");
             number = Math.floor( Math.random() * 100 ) + 1;
-            count = 0
-            document.getElementById("user-number").value = ""
-            document.getElementById("result").innerHTML = ""
+            count = 0;
+            document.getElementById("user-number").value = "";
+            document.getElementById("result").innerHTML = "";
             screens[2].style.display = "none";
             screens[1].style.display = "block";
         }
@@ -146,55 +146,55 @@
 
         function ChangeColor(div) {
             if (div.style.backgroundColor == "yellow") {
-                div.style.backgroundColor = "red"
-                div.style.color = "black"
-                document.getElementById("color_name").innerHTML = "Красный"
+                div.style.backgroundColor = "red";
+                div.style.color = "black";
+                document.getElementById("color_name").innerHTML = "Красный";
             }
             else if (div.style.backgroundColor == "red") {
-                div.style.backgroundColor = "black"
-                div.style.color = "white"
-                document.getElementById("color_name").innerHTML = "Чёрный"
+                div.style.backgroundColor = "black";
+                div.style.color = "white";
+                document.getElementById("color_name").innerHTML = "Чёрный";
             }
             else if (div.style.backgroundColor == "black") {
-                div.style.backgroundColor = "blue"
-                div.style.color = "yellow"
-                document.getElementById("color_name").innerHTML = "Синий"
+                div.style.backgroundColor = "blue";
+                div.style.color = "yellow";
+                document.getElementById("color_name").innerHTML = "Синий";
             }
             else if (div.style.backgroundColor == "blue") {
-                div.style.backgroundColor = "green"
-                div.style.color = "blue"
-                document.getElementById("color_name").innerHTML = "Зелёный"
+                div.style.backgroundColor = "green";
+                div.style.color = "blue";
+                document.getElementById("color_name").innerHTML = "Зелёный";
             }
             else {
                 div.style.backgroundColor = "yellow"
-                div.style.color = "maroon"
-                document.getElementById("color_name").innerHTML = "Жёлтый"
+                div.style.color = "maroon";
+                document.getElementById("color_name").innerHTML = "Жёлтый";
             }
         }
 
         function move_kv (div) {
             count_click++;
-            count_click_counter = count_click % 2
+            count_click_counter = count_click % 2;
             if (count_click_counter == 1) {
-                div.style.left = "1240px"
-                div.style.transform = "rotate(1turn)"
+                div.style.left = "1240px";
+                div.style.transform = "rotate(1turn)";
             }
             else {
-                div.style.left = "0px"
-                div.style.transform = "rotate(0)"
-                count_click = 0
+                div.style.left = "0px";
+                div.style.transform = "rotate(0)";
+                count_click = 0;
             }
         }
 
         function increase_f (div) {
-            width = div.offsetWidth
+            width = div.offsetWidth;
             if (width <= 953) {
-                width = width + 50 + "px"
-                div.style.width = width
+                width = width + 50 + "px";
+                div.style.width = width;
             }
             else {
-                width = 103 + "px"
-                div.style.width = width
+                width = 103 + "px";
+                div.style.width = width;
             }
         }
 
@@ -207,28 +207,28 @@
                 wear.src = "red-f.jpg";
             }
             else if(color =="Белый" && type =="Футболка") {
-                wear.src = "white-f.jpeg"
+                wear.src = "white-f.jpeg";
             }
             else if(color =="Чёрный" && type =="Футболка") {
-                wear.src = "black-f.jpeg"
+                wear.src = "black-f.jpeg";
             }
             else if(color =="Красный" && type =="Поло") {
-                wear.src = "red-p.jpeg"
+                wear.src = "red-p.jpeg";
             }
             else if(color =="Белый" && type =="Поло") {
-                wear.src = "white-p.jpeg"
+                wear.src = "white-p.jpeg";
             }
             else if(color =="Чёрный" && type =="Поло") {
-                wear.src = "black-p.jpeg"
+                wear.src = "black-p.jpeg";
             }
             else if(color =="Красный" && type =="Майка") {
-                wear.src = "red-m.jpeg"
+                wear.src = "red-m.jpeg";
             }
             else if(color =="Белый" && type =="Майка") {
-                wear.src = "white-m.jpeg"
+                wear.src = "white-m.jpeg";
             }
             else {
-                wear.src = "black-m.jpeg"
+                wear.src = "black-m.jpeg";
             }
         }
     </script>
