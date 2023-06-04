@@ -34,6 +34,16 @@
             let average = sum / exchange.length;
             document.getElementById("detail").innerHTML = "Среднее значение : " + average;
         }
+
+        function changeOpasity() {
+            let blocks = document.getElementById("opasity_blocks");
+            for (let i = 0; i < 10; i++) {
+                let block = document.createElement("div");
+                block.innerHTML = "Блок №" + (i+1) + ": " + (10 * (i+1)) + "%";
+                block.style.opacity = i / 10;
+                blocks.appendChild(block);
+            }
+        }
     </script>
 </head>
 
@@ -49,6 +59,9 @@
         <button onclick="showExchange()">Курс доллара</button>
         <table border="1" id="dollar-exchange"></table>
         <div id="detail"></div>
+
+        <button onclick="changeOpasity()">Создать полупрозрачные блоки</button>
+        <div id="opasity_blocks"></div>
     </main>
 
     <footer>
