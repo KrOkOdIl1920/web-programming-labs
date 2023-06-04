@@ -51,7 +51,7 @@
                 sum = sum + exchange[i];
             }
             let average = sum / exchange.length;
-            document.getElementById("detail").innerHTML = "Среднее значение : " + average;
+            document.getElementById("detail").innerHTML = "Среднее значение : " + average.toFixed(2);
         }
 
         function changeOpasity() {
@@ -90,6 +90,45 @@
                 blocks.appendChild(block);
             }
         }
+
+        
+        
+        function stock() {
+            let date = ["22.05.2023", "23.05.2023", "24.05.2023", "25.05.2023", 
+                        "26.05.2023", "29.05.2023", "31.05.2023", "01.06.2023", "02.06.2023"];
+            let stock_value = [668.00, 667.00, 678.40, 682.20, 698.80, 727.00, 731.60, 738.00, 745.00];
+            let table = document.getElementById("table");
+            for (let i = 0; i< stock_value.length; i++) {
+                let tr = document.createElement('tr');
+                let dates = document.createElement('td');
+                let stocks = document.createElement('td');
+                let difference = document.createElement('td');
+                dates.innerHTML = date[i];
+                stocks.innerHTML = stock_value[i];
+                difference.innerHTML = (stock_value[i] - stock_value[i-1]).toFixed(1); 
+                tr.appendChild(dates);
+                tr.appendChild(stocks);
+                if(difference.innerHTML == 'NaN') {
+                    difference.innerHTML ='-';
+                    tr.appendChild(difference);
+                }
+                else {
+                    tr.append(difference);
+                }
+                table.appendChild(tr);
+
+            let sum = 0;
+            for(let i = 0; i < stock_value.length; i++) {
+                sum = sum + stock_value[i];
+            }
+            let average = sum / stock_value.length;
+            document.getElementById("stock_detail").innerHTML = "Среднее значение : " + average.toFixed(0);
+            }
+            let min_stock = Math.min(...stock_value);
+            let max_stock = Math.max(...stock_value);
+            document.getElementById("min").innerHTML = "Минимальное значение : " + min_stock;
+            document.getElementById("max").innerHTML = "Максимальное значение : " + max_stock;
+        }
     </script>
 </head>
 
@@ -118,6 +157,12 @@
 
         <button onclick="multiplication()">Таблица умножения на 64</button>
         <div id="mult_table"></div>
+
+        <button onclick="stock()">Курс акций "Группа ЛСР"</button>
+        <table border="1" id=table></table>
+        <div id="stock_detail"></div>
+        <div id="min"></div>
+        <div id="max"></div>
     </main>
 
     <footer>
