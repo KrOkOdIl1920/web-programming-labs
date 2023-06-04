@@ -80,6 +80,16 @@
                 screen.appendChild(circles);
             }
         }
+
+        function multiplication() {
+            let blocks = document.getElementById("mult_table");
+            for (let i = 13; i <= 33; i++) {
+                let block = document.createElement("div");
+                let result = i * 64;
+                block.innerHTML = i + " * 64 = " + result;
+                blocks.appendChild(block);
+            }
+        }
     </script>
 </head>
 
@@ -105,6 +115,9 @@
             <button onclick="Create_circles()">Красное/зелёное</button>
             <div id="screen" style="color: white;"></div>
         </div>
+
+        <button onclick="multiplication()">Таблица умножения на 64</button>
+        <div id="mult_table"></div>
     </main>
 
     <footer>
