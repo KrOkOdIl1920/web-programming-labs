@@ -7,6 +7,21 @@
     <title>Донельчук Артём Вячеславович. Лабораторная работа 8</title>
     <link rel="stylesheet" href="main.css">
     <script src="lab8.js"></script>
+    <style>
+        .birthday {
+            position: absolute;
+            top: 50px;
+            left: 600px;
+            border: 1px solid gray;
+            border-radius: 10px;
+            height: auto;
+            width: fit-content;
+            margin: 10px auto;
+            text-align: center;
+            padding: 10px;
+            background-color: wheat;
+        }
+    </style>
 </head>
 
 <body onload="showDate()">
@@ -20,6 +35,19 @@
         <div id="date_JP"></div>
         <div id="date_KG"></div>
         <div id="date_IN"></div>
+
+        <div class="birthday">
+            <div>
+                <label>Дата рождения: <input type="date"></label>
+            </div>
+
+            <div>
+                <button onclick="showDaysCount()">Показать число дней</button>
+                <button onclick="remove_info()">Очистить форму</button>
+            </div>
+
+            <div id="birthday_div"></div>
+        </div>
     </main>
 
     <footer>

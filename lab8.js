@@ -11,3 +11,20 @@ function showDate() {
     out_KG.innerHTML = "Дата и время для киргизской локали: " + today.toLocaleString("ky-KG");
     out_IN.innerHTML = "Дата и время для каннадской локали: " + today.toLocaleString("kn");
 }
+
+function showDaysCount() {
+    let birthday_div = document.getElementById("birthday_div");
+    let today= new Date();
+    let inputDate = document.querySelector("input[type=date]");
+    let birthday = new Date(inputDate.value);
+    let daysCount = (today - birthday)/1000/60/60/24;
+    daysCount = Math.floor(daysCount);
+    birthday_div.innerHTML = "Количество дней с даты рождения: " + daysCount;
+}
+
+function remove_info() {
+    let birthday_div = document.getElementById("birthday_div");
+    let remove_input = document.querySelector("input[type=date]");
+    birthday_div.innerHTML = "";
+    remove_input.value = "";
+}
