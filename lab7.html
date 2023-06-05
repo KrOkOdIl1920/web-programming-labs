@@ -99,17 +99,17 @@
             let stock_value = [668.00, 667.00, 678.40, 682.20, 698.80, 727.00, 731.60, 738.00, 745.00];
             let table = document.getElementById("table");
             for (let i = 0; i< stock_value.length; i++) {
-                let tr = document.createElement('tr');
-                let dates = document.createElement('td');
-                let stocks = document.createElement('td');
-                let difference = document.createElement('td');
+                let tr = document.createElement("tr");
+                let dates = document.createElement("td");
+                let stocks = document.createElement("td");
+                let difference = document.createElement("td");
                 dates.innerHTML = date[i];
                 stocks.innerHTML = stock_value[i];
                 difference.innerHTML = (stock_value[i] - stock_value[i-1]).toFixed(1); 
                 tr.appendChild(dates);
                 tr.appendChild(stocks);
-                if(difference.innerHTML == 'NaN') {
-                    difference.innerHTML ='-';
+                if(difference.innerHTML == "NaN") {
+                    difference.innerHTML =" ";
                     tr.appendChild(difference);
                 }
                 else {
