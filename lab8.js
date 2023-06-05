@@ -28,3 +28,11 @@ function remove_info() {
     birthday_div.innerHTML = "";
     remove_input.value = "";
 }
+
+function showTime() {
+    let today = new Date();
+    let current_time = today.toLocaleTimeString("ru-RU");
+    document.getElementById("time").innerHTML = current_time
+}
+
+setInterval(showTime, 1000);
